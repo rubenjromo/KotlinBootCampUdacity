@@ -5,12 +5,32 @@ import java.util.Random
 fun main (args: Array<String>){
     println("Hello!")
     feedthefish()
+    var bubbles = 0
+    while (bubbles<50){
+        bubbles++
+    }
+    repeat(2 ){ it:Int
+    println("A fish is swimming")
+    }
+}
+fun getDirtySensorReading() = 20
+
+fun shouldChangeWater(day:String, temperature: Int = 22, dirty: Int = getDirtySensorReading()): Boolean {
+
+    val isTooHot = temperature>30
+    val isDirty = dirty>30
+    val isSunny = day=="Sunny"
+    return when {
+        isTooHot(temperature) -> true
+        isDirty(dirty)-> true
+        isSunny(day) ->true
+        else -> false
+    }
 }
 
-fun shouldChangeWater(day:String, temperature: Int = 22, dirty: Int = 20): Boolean {
-    return true
-
-}
+fun isTooHot(temperature:Int) = temperature>30
+fun isDirty(dirty:Int) = dirty>30
+fun isSunny(day:String) = day == "Sunny"
 
 fun feedthefish () {
     val day = RandomDay()
