@@ -9,9 +9,7 @@ fun main (args: Array<String>){
     while (bubbles<50){
         bubbles++
     }
-    repeat(2 ){ it:Int
-    println("A fish is swimming")
-    }
+
 }
 fun getDirtySensorReading() = 20
 

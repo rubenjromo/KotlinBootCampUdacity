@@ -5,7 +5,7 @@ fun main(args: Array<String>){
 
     val curries = spices.filter { it.contains("curry") }.sortedBy { it.length }
 
-    val startswithc = spices.filter { {it.startsWith('c') && it.endsWith('e') }
+    val startswithc = spices.filter { {it.startsWith('c') && it.endsWith('e') }}
 
-    val 3itemswithc = spices.take(3).filter{it.startsWith('c')}
+    val items3withc = spices.take(3).filter{it.startsWith('c')}
 }
