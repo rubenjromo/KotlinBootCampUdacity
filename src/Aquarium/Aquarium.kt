@@ -19,7 +19,7 @@ open class Aquarium (var width: Int = 20, var length: Int = 40, var height: Int 
 
 }
 class TowerTank(): Aquarium() {
-    override water = volume *0.8
+    override var water = volume *0.8
     override var volume: Int
         get() = (width * length * height / 1000 * PI).toInt()
         set(value) {height = (value *1000) / (width * length)}
